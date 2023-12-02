@@ -44,8 +44,8 @@ function matthew(){
                 <td>R${item.price}</td>
                 <td>${item.description}</td>
                 <td><img src='${item.url}'></td>
-                <td><button class='delete' value=${index}>delete</button></td>
                 <td><button>edit</button></td>
+                <td><button class='delete' value=${index}>delete</button></td>
             </tr>
         `
     })
@@ -65,4 +65,7 @@ table.addEventListener('click',function () {
         remove(event.target.value) //passing value set to button
         // alert(event.target.value)
     }
+})
+let a = items.filter(item =>{
+    return item.name=='Nike Shoe'
 })
